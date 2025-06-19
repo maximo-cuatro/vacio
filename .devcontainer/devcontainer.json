@@ -1,0 +1,22 @@
+{
+  "name": "Node.js Development",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-buster",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts",
+      "installNpm": true,
+      "installYarn": false,
+      "installPnpm": false
+    }
+  },
+  "postStartCommand": "bash /workspaces/vacio/iniciar_procesos.sh",
+  "customizations": {
+    "vscode": {
+      "terminal.integrated.defaultProfile.linux": "bash",
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  }
+}
